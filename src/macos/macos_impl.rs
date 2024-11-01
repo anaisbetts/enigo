@@ -975,6 +975,8 @@ impl TryFrom<Key> for core_graphics::event::CGKeyCode {
             | Key::MediaRewind
             | Key::Power
             | Key::VidMirror => return Err(()),
+            #[cfg(feature = "bindable")]
+            _ => return Err(()),
         };
         Ok(key)
     }
