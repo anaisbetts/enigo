@@ -1078,7 +1078,7 @@ impl TryFrom<Key> for windows::Win32::UI::Input::KeyboardAndMouse::VIRTUAL_KEY {
             }
             Key::Super | Key::Command | Key::Windows | Key::Meta | Key::LWin => VK_LWIN,
             #[cfg(feature = "bindable")]
-            _ => return Err(()),
+            _ => todo!("Not possible")
         };
 
         trace!("virtual key: {vk:?})");
