@@ -727,6 +727,8 @@ impl From<Key> for xkeysym::Keysym {
             Key::MicMute => Keysym::XF86_AudioMicMute,
             Key::Command | Key::Super | Key::Windows | Key::Meta => Keysym::Super_L,
             Key::Other(v) => Keysym::from(v),
+            #[cfg(feature = "bindable")]
+            _ => todo!("Not implemented")
         }
     }
 }
