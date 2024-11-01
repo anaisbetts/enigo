@@ -16,184 +16,184 @@ use strum_macros::EnumIter;
 #[cfg_attr(test, derive(EnumIter))]
 #[derive(Debug, Copy, Clone, PartialEq, Eq, Hash)]
 pub enum Key {
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num0,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num3,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num4,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num5,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num6,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num7,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num8,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Num9,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     A,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     B,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     C,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     D,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     E,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     F,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     G,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     H,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     I,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     J,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     K,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     L,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     M,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     N,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     O,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     P,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Q,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     R,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     S,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     T,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     U,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     V,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     W,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     X,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Y,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Z,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     AbntC1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     AbntC2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Accept,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Add,
     /// alt key on Linux and Windows (option key on macOS)
     Alt,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Apps,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Attn,
     /// backspace key
     Backspace,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Break,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Begin,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     BrightnessDown,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     BrightnessUp,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserBack,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserFavorites,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserForward,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserHome,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserRefresh,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserSearch,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     BrowserStop,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Cancel,
     /// caps lock key
     CapsLock,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Clear,
     #[deprecated(since = "0.0.12", note = "now renamed to Meta")]
     /// command key on macOS (super key on Linux, windows key on Windows)
     #[cfg_attr(feature = "serde", serde(alias = "cmd"))]
     Command,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     ContrastUp,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     ContrastDown,
     /// control key
     #[cfg_attr(feature = "serde", serde(alias = "ctrl"))]
     Control,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Convert,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Crsel,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEAlphanumeric,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBECodeinput,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEDetermineString,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEEnterDLGConversionMode,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEEnterIMEConfigMode,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEEnterWordRegisterMode,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEFlushString,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEHiragana,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBEKatakana,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBENoCodepoint,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBENoRoman,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBERoman,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBESBCSChar,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     DBESChar,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Decimal,
     /// delete key
     Delete,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Divide,
     /// down arrow key
     DownArrow,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     Eject,
     /// end key
     End,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Ereof,
     /// escape key (esc)
     Escape,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Execute,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Exsel,
     /// F1 key
     F1,
@@ -235,379 +235,379 @@ pub enum Key {
     F19,
     /// F20 key
     F20,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     /// F21 key
     F21,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     /// F22 key
     F22,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     /// F23 key
     F23,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     /// F24 key
     F24,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F25,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F26,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F27,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F28,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F29,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F30,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F31,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F32,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F33,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F34,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     F35,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     Function,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Final,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Find,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadA,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadB,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadDPadDown,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadDPadLeft,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadDPadRight,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadDPadUp,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftShoulder,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftThumbstickButton,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftThumbstickDown,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftThumbstickLeft,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftThumbstickRight,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftThumbstickUp,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadLeftTrigger,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadMenu,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightShoulder,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightThumbstickButton,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightThumbstickDown,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightThumbstickLeft,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightThumbstickRight,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightThumbstickUp,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadRightTrigger,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadView,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadX,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     GamepadY,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Hangeul,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Hangul,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Hanja,
     Help,
     /// home key
     Home,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Ico00,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     IcoClear,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     IcoHelp,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     IlluminationDown,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     IlluminationUp,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     IlluminationToggle,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     IMEOff,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     IMEOn,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Insert,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Junja,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Kana,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Kanji,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LaunchApp1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LaunchApp2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LaunchMail,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LaunchMediaSelect,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     /// Opens launchpad
     Launchpad,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     LaunchPanel,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LButton,
     LControl,
     /// left arrow key
     LeftArrow,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Linefeed,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     LMenu,
     LShift,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     LWin,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     MButton,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     MediaFast,
     MediaNextTrack,
     MediaPlayPause,
     MediaPrevTrack,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     MediaRewind,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     MediaStop,
     /// meta key (also known as "windows", "super", and "command")
     Meta,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     /// Opens mission control
     MissionControl,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     ModeChange,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Multiply,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationAccept,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationCancel,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationDown,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationLeft,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationMenu,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationRight,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationUp,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NavigationView,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NoName,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     NonConvert,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     None,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Numlock,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad0,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad3,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad4,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad5,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad6,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad7,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad8,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Numpad9,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM102,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM3,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM4,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM5,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM6,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM7,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEM8,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMAttn,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMAuto,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMAx,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMBacktab,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMClear,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMComma,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMCopy,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMCusel,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMEnlw,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFinish,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFJJisho,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFJLoya,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFJMasshou,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFJRoya,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMFJTouroku,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMJump,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMMinus,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMNECEqual,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMPA1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMPA2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMPA3,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMPeriod,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMPlus,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMReset,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     OEMWsctrl,
     /// option key on macOS (alt key on Linux and Windows)
     Option,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     PA1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Packet,
     /// page down key
     PageDown,
     /// page up key
     PageUp,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Pause,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Play,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     Power,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     #[deprecated(since = "0.2.2", note = "now renamed to PrintScr")]
     Print,
     /// Take a screenshot
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     #[doc(alias = "Print")]
     #[doc(alias = "Snapshot")]
     PrintScr,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Processkey,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     RButton,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     RCommand,
     RControl,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Redo,
     /// return key
     Return,
     /// right arrow key
     RightArrow,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     RMenu,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     ROption,
     RShift,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     RWin,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Scroll,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     ScrollLock,
-    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos"))))]
+    #[cfg(any(target_os = "windows", all(unix, not(target_os = "macos")), feature = "bindable"))]
     Select,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     ScriptSwitch,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Separator,
     /// shift key
     Shift,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     /// Lock shift key
     ShiftLock,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Sleep,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     #[deprecated(since = "0.2.2", note = "now renamed to PrintScr")]
     Snapshot,
     /// space key
     Space,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Subtract,
     #[deprecated(since = "0.0.12", note = "now renamed to Meta")]
     /// super key on linux (command key on macOS, windows key on Windows)
     Super,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     SysReq,
     /// tab key (tabulator)
     Tab,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(any(all(unix, not(target_os = "macos")), feature = "bindable"))]
     Undo,
     /// up arrow key
     UpArrow,
-    #[cfg(target_os = "macos")]
+    #[cfg(any(target_os = "macos", feature = "bindable"))]
     VidMirror,
     VolumeDown,
     VolumeMute,
     VolumeUp,
-    #[cfg(all(unix, not(target_os = "macos")))]
+    #[cfg(all(unix, not(target_os = "macos"), feature = "bindable"))]
     /// microphone mute toggle on linux
     MicMute,
     #[deprecated(since = "0.0.12", note = "now renamed to Meta")]
     /// windows key on Windows (super key on Linux, command key on macOS)
     Windows,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     XButton1,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     XButton2,
-    #[cfg(target_os = "windows")]
+    #[cfg(any(target_os = "windows", feature = "bindable"))]
     Zoom,
     /// Unicode character
     #[doc(alias = "Layout")]
@@ -1077,6 +1077,8 @@ impl TryFrom<Key> for windows::Win32::UI::Input::KeyboardAndMouse::VIRTUAL_KEY {
                 VIRTUAL_KEY(v)
             }
             Key::Super | Key::Command | Key::Windows | Key::Meta | Key::LWin => VK_LWIN,
+            #[cfg(feature = "bindable")]
+            _ => return Err(()),
         };
 
         trace!("virtual key: {vk:?})");
